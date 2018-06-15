@@ -29,7 +29,7 @@ const getCurrentCulor = () => {
 /**
   * CASE 1
   */
-describe('Récupérer la liste de couleur', () => {
+describe('/GET /colors Récupérer la liste de couleur', () => {
   // Vérification du status de la réponse.
   it('Verifier le status 200', (done) => {
     chai.request(app)
@@ -86,7 +86,7 @@ describe('Récupérer la liste de couleur', () => {
 /**
   * CASE 2
   */
-describe('Récupérer un path invalide', () => {
+describe('/POST /colors Récupérer un path invalide', () => {
   // Vérification du status de la réponse.
   it('Verifier le status 201', (done) => {
     chai.request(app)
@@ -146,7 +146,7 @@ describe('Récupérer un path invalide', () => {
 /**
   * CASE 3
   */
-describe('Poster une nouvelle couleur', () => {
+describe('/POST /colors Poster une nouvelle couleur', () => {
   // Vérification du status de la réponse.
   it('Verifier le status 404 (throw catch)', (done) => {
     chai.request(app)
@@ -161,7 +161,7 @@ describe('Poster une nouvelle couleur', () => {
 /**
   * CASE 4
   */
-describe('Récupérer la nouvelle liste de couleur', () => {
+describe('/GET /colors Récupérer la nouvelle liste de couleur', () => {
   // Vérification du status de la réponse.
   it('Verifier le status 200', (done) => {
     chai.request(app)
